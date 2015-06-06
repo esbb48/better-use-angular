@@ -1,0 +1,32 @@
+<!doctype html>
+<html ng-app="baseApp">
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+    <script src="app.js"></script>
+  </head>
+  <body ng-controller="baseController">
+
+    <H1> {{ article.title}} </H1>
+    <div class="article-content"> {{ article.content }} </div>
+    <hr />
+
+    <H3> 留言 </H3>
+    <div id="msg-form" >
+      <msg-box data="formData"></msg-box>
+      <div>
+        <label>Name</label>
+        <input type="text" ng-model="formData.from"/>
+      </div>
+      <textarea ng-model="formData.content" row="4"> </textarea>
+      <button ng-click="sendMsg(formData)"> Send Msg</button>
+    </div>
+    <hr/>
+
+    <H3> 回應 </H3>
+    <div id="msg-list" >
+      <msg-box data="m" ng-repeat="m in messages track by $index"></msg-box>
+    </div>
+
+  </body>
+</html>

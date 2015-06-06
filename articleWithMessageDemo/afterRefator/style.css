@@ -1,0 +1,26 @@
+.article-content {
+  width: 600px;
+}
+
+.msg-box {
+  border: 1px solid #000;
+  margin: 10px;
+  padding: 10px;
+  position: relative;
+  width: 300px;
+}
+
+.msg-box .msg-content {
+  padding: 10px;
+}
+
+.msg-box span {
+  bottom: 5px;
+  position: absolute;
+  right: 10px;
+}
+
+#msg-form textarea {
+  width: 400px;
+  height: 120px;
+}
