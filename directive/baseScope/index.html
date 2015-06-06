@@ -1,0 +1,24 @@
+<!doctype html>
+<html ng-app="demoScopeApp">
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+    <script src="app.js"></script>
+  </head>
+  <body ng-controller="demoScopeController">
+    <h1>基礎 Scope 的三種設定</h1>
+    外層（爸爸） -> {{ message }}
+
+
+    <h2>[預設] scope = false  :: </h2>
+    <scope-is-false></scope-is-false>
+
+    <h2> scope = true :: </h2>
+    <scope-is-true></scope-is-true>
+
+
+    <h2> scope = {} :: </h2>
+    <scope-is-object></scope-is-object>
+
+  </body>
+</html>
